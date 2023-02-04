@@ -1,0 +1,268 @@
+ℹ️  Starting Dapr with id CarService. HTTP Port: 42219. gRPC Port: 37623
+ℹ️  Checking if Dapr sidecar is listening on HTTP port 42219
+time="2023-01-24T13:58:26.458865157+01:00" level=info msg="starting Dapr Runtime -- version 1.9.4 -- commit 576ac0348e56e25b906d9e7a5c817db451cc5b34" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:58:26.458954958+01:00" level=info msg="log level set to: info" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:58:26.459078664+01:00" level=info msg="metrics server started on :42727/" app_id=CarService instance=bastian-VirtualBox scope=dapr.metrics type=log ver=1.9.4
+time="2023-01-24T13:58:26.459683824+01:00" level=info msg="standalone mode configured" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:58:26.459750079+01:00" level=info msg="app id: CarService" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:58:26.460042892+01:00" level=info msg="mTLS is disabled. Skipping certificate request and tls validation" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:58:26.460096664+01:00" level=info msg="Dapr trace sampler initialized: DaprTraceSampler(P=1.000000)" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:58:26.461025291+01:00" level=info msg="local service entry announced: CarService -> 10.0.2.15:41865" app_id=CarService instance=bastian-VirtualBox scope=dapr.contrib type=log ver=1.9.4
+time="2023-01-24T13:58:26.461054158+01:00" level=info msg="Initialized name resolution to mdns" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:58:26.461075887+01:00" level=info msg="loading components" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:58:26.46369615+01:00" level=info msg="component loaded. name: pubsub, type: pubsub.redis/v1" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:58:26.463864351+01:00" level=info msg="waiting for all outstanding components to be processed" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:58:26.465558574+01:00" level=info msg="detected actor state store: statestore" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:58:26.465585054+01:00" level=info msg="component loaded. name: statestore, type: state.redis/v1" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:58:26.465648243+01:00" level=info msg="all outstanding components processed" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:58:26.465680918+01:00" level=info msg="gRPC proxy enabled" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:58:26.465717246+01:00" level=info msg="enabled gRPC tracing middleware" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.grpc.api type=log ver=1.9.4
+time="2023-01-24T13:58:26.465729856+01:00" level=info msg="enabled gRPC metrics middleware" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.grpc.api type=log ver=1.9.4
+time="2023-01-24T13:58:26.465771038+01:00" level=info msg="API gRPC server is running on port 37623" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:58:26.465932411+01:00" level=info msg="enabled metrics http middleware" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.http type=log ver=1.9.4
+time="2023-01-24T13:58:26.465944529+01:00" level=info msg="enabled tracing http middleware" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.http type=log ver=1.9.4
+time="2023-01-24T13:58:26.465966524+01:00" level=info msg="http server is running on port 42219" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:58:26.46598139+01:00" level=info msg="The request body size parameter is: 4" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:58:26.4660122+01:00" level=info msg="enabled gRPC tracing middleware" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.grpc.internal type=log ver=1.9.4
+time="2023-01-24T13:58:26.466023085+01:00" level=info msg="enabled gRPC metrics middleware" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.grpc.internal type=log ver=1.9.4
+time="2023-01-24T13:58:26.466047731+01:00" level=info msg="internal gRPC server is running on port 41865" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:58:26.466058288+01:00" level=warning msg="App channel is not initialized. Did you configure an app-port?" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:58:26.466174227+01:00" level=info msg="actor runtime started. actor idle timeout: 1h0m0s. actor scan interval: 30s" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.actor type=log ver=1.9.4
+time="2023-01-24T13:58:26.466194384+01:00" level=warning msg="app channel not initialized, make sure -app-port is specified if pubsub subscription is required" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:58:26.466211505+01:00" level=warning msg="failed to read from bindings: app channel not initialized " app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:58:26.46621898+01:00" level=info msg="dapr initialized. Status: Running. Init Elapsed 6ms" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+ℹ️  Checking if Dapr sidecar is listening on GRPC port 37623
+ℹ️  Dapr sidecar is up and running.
+ℹ️  Updating metadata for app command: java -jar target/CarService-0.0.1-SNAPSHOT.jar com.daprdemo.CarService.CarServiceApplication
+✅  You're up and running! Both Dapr and your app logs will appear here.
+
+== APP == 
+== APP ==   .   ____          _            __ _ _
+== APP ==  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+== APP == ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+== APP ==  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+== APP ==   '  |____| .__|_| |_|_| |_\__, | / / / /
+== APP ==  =========|_|==============|___/=/_/_/_/
+== APP ==  :: Spring Boot ::                (v2.7.8)
+== APP == 
+== APP == 2023-01-24 13:58:28.938  INFO 25956 --- [           main] c.d.CarService.CarServiceApplication     : Starting CarServiceApplication v0.0.1-SNAPSHOT using Java 11.0.17 on bastian-VirtualBox with PID 25956 (/home/bastian/Desktop/dapr-resilience/CarService/target/CarService-0.0.1-SNAPSHOT.jar started by bastian in /home/bastian/Desktop/dapr-resilience/CarService)
+== APP == 2023-01-24 13:58:28.942  INFO 25956 --- [           main] c.d.CarService.CarServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+== APP == 2023-01-24 13:58:30.383  INFO 25956 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+== APP == 2023-01-24 13:58:30.410  INFO 25956 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+== APP == 2023-01-24 13:58:30.411  INFO 25956 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+== APP == 2023-01-24 13:58:30.513  INFO 25956 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+== APP == 2023-01-24 13:58:30.514  INFO 25956 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1393 ms
+== APP == 2023-01-24 13:58:30.911  WARN 25956 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+== APP == 2023-01-24 13:58:30.914  INFO 25956 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+== APP == 2023-01-24 13:58:30.928  INFO 25956 --- [           main] ConditionEvaluationReportLoggingListener : 
+== APP == 
+== APP == Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+== APP == 2023-01-24 13:58:30.943 ERROR 25956 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+== APP == 
+== APP == ***************************
+== APP == APPLICATION FAILED TO START
+== APP == ***************************
+== APP == 
+== APP == Description:
+== APP == 
+== APP == Web server failed to start. Port 8080 was already in use.
+== APP == 
+== APP == Action:
+== APP == 
+== APP == Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+== APP == 
+❌  The App process exited with error code: exit status 1
+ℹ️  
+terminated signal received: shutting down
+✅  Exited Dapr successfully
+❌  Error exiting App: exit status 1
+ℹ️  Starting Dapr with id CarService. HTTP Port: 41809. gRPC Port: 34725
+ℹ️  Checking if Dapr sidecar is listening on HTTP port 41809
+time="2023-01-24T13:59:22.009427398+01:00" level=info msg="starting Dapr Runtime -- version 1.9.4 -- commit 576ac0348e56e25b906d9e7a5c817db451cc5b34" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:59:22.009508955+01:00" level=info msg="log level set to: info" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:59:22.00961962+01:00" level=info msg="metrics server started on :45565/" app_id=CarService instance=bastian-VirtualBox scope=dapr.metrics type=log ver=1.9.4
+time="2023-01-24T13:59:22.009929969+01:00" level=info msg="standalone mode configured" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:59:22.009943637+01:00" level=info msg="app id: CarService" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:59:22.010318949+01:00" level=info msg="mTLS is disabled. Skipping certificate request and tls validation" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:59:22.010452501+01:00" level=info msg="Dapr trace sampler initialized: DaprTraceSampler(P=1.000000)" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:59:22.011071749+01:00" level=info msg="local service entry announced: CarService -> 10.0.2.15:33205" app_id=CarService instance=bastian-VirtualBox scope=dapr.contrib type=log ver=1.9.4
+time="2023-01-24T13:59:22.011100708+01:00" level=info msg="Initialized name resolution to mdns" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:59:22.011123022+01:00" level=info msg="loading components" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:59:22.014008244+01:00" level=info msg="component loaded. name: pubsub, type: pubsub.redis/v1" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:59:22.014455202+01:00" level=info msg="waiting for all outstanding components to be processed" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:59:22.017364351+01:00" level=info msg="detected actor state store: statestore" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:59:22.017389746+01:00" level=info msg="component loaded. name: statestore, type: state.redis/v1" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:59:22.017409173+01:00" level=info msg="all outstanding components processed" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:59:22.017418207+01:00" level=info msg="gRPC proxy enabled" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:59:22.017556778+01:00" level=info msg="enabled gRPC tracing middleware" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.grpc.api type=log ver=1.9.4
+time="2023-01-24T13:59:22.017573012+01:00" level=info msg="enabled gRPC metrics middleware" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.grpc.api type=log ver=1.9.4
+time="2023-01-24T13:59:22.017659087+01:00" level=info msg="API gRPC server is running on port 34725" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:59:22.017982022+01:00" level=info msg="enabled metrics http middleware" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.http type=log ver=1.9.4
+time="2023-01-24T13:59:22.018003259+01:00" level=info msg="enabled tracing http middleware" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.http type=log ver=1.9.4
+time="2023-01-24T13:59:22.01808139+01:00" level=info msg="http server is running on port 41809" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:59:22.01809607+01:00" level=info msg="The request body size parameter is: 4" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:59:22.018130023+01:00" level=info msg="enabled gRPC tracing middleware" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.grpc.internal type=log ver=1.9.4
+time="2023-01-24T13:59:22.018145861+01:00" level=info msg="enabled gRPC metrics middleware" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.grpc.internal type=log ver=1.9.4
+time="2023-01-24T13:59:22.018172546+01:00" level=info msg="internal gRPC server is running on port 33205" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:59:22.018180915+01:00" level=warning msg="App channel is not initialized. Did you configure an app-port?" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:59:22.018284104+01:00" level=info msg="actor runtime started. actor idle timeout: 1h0m0s. actor scan interval: 30s" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.actor type=log ver=1.9.4
+time="2023-01-24T13:59:22.01830228+01:00" level=warning msg="app channel not initialized, make sure -app-port is specified if pubsub subscription is required" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:59:22.018317385+01:00" level=warning msg="failed to read from bindings: app channel not initialized " app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T13:59:22.018325078+01:00" level=info msg="dapr initialized. Status: Running. Init Elapsed 8ms" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+ℹ️  Checking if Dapr sidecar is listening on GRPC port 34725
+ℹ️  Dapr sidecar is up and running.
+ℹ️  Updating metadata for app command: java -jar target/CarService-0.0.1-SNAPSHOT.jar com.daprdemo.CarService.CarServiceApplication
+✅  You're up and running! Both Dapr and your app logs will appear here.
+
+== APP == 
+== APP ==   .   ____          _            __ _ _
+== APP ==  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+== APP == ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+== APP ==  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+== APP ==   '  |____| .__|_| |_|_| |_\__, | / / / /
+== APP ==  =========|_|==============|___/=/_/_/_/
+== APP ==  :: Spring Boot ::                (v2.7.8)
+== APP == 
+== APP == 2023-01-24 13:59:23.938  INFO 26369 --- [           main] c.d.CarService.CarServiceApplication     : Starting CarServiceApplication v0.0.1-SNAPSHOT using Java 11.0.17 on bastian-VirtualBox with PID 26369 (/home/bastian/Desktop/dapr-resilience/CarService/target/CarService-0.0.1-SNAPSHOT.jar started by bastian in /home/bastian/Desktop/dapr-resilience/CarService)
+== APP == 2023-01-24 13:59:23.942  INFO 26369 --- [           main] c.d.CarService.CarServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+== APP == 2023-01-24 13:59:24.864  INFO 26369 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+== APP == 2023-01-24 13:59:24.874  INFO 26369 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+== APP == 2023-01-24 13:59:24.874  INFO 26369 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+== APP == 2023-01-24 13:59:24.947  INFO 26369 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+== APP == 2023-01-24 13:59:24.947  INFO 26369 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 915 ms
+== APP == 2023-01-24 13:59:25.320  INFO 26369 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+== APP == 2023-01-24 13:59:25.333  INFO 26369 --- [           main] c.d.CarService.CarServiceApplication     : Started CarServiceApplication in 1.915 seconds (JVM running for 2.388)
+time="2023-01-24T14:01:11.30433204+01:00" level=info msg="stopping mDNS server for app id: CarService" app_id=CarService instance=bastian-VirtualBox scope=dapr.contrib type=log ver=1.9.4
+ℹ️  
+terminated signal received: shutting down
+time="2023-01-24T14:01:11.304325123+01:00" level=info msg="dapr shutting down." app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:01:11.304987249+01:00" level=info msg="Stopping PubSub subscribers and input bindings" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:01:11.305006103+01:00" level=info msg="Shutting down actor" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+✅  Exited Dapr successfully
+✅  Exited App successfully
+ℹ️  Starting Dapr with id CarService. HTTP Port: 45699. gRPC Port: 35511
+ℹ️  Checking if Dapr sidecar is listening on HTTP port 45699
+time="2023-01-24T14:01:38.588091324+01:00" level=info msg="starting Dapr Runtime -- version 1.9.4 -- commit 576ac0348e56e25b906d9e7a5c817db451cc5b34" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:01:38.588172116+01:00" level=info msg="log level set to: info" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:01:38.588286345+01:00" level=info msg="metrics server started on :37801/" app_id=CarService instance=bastian-VirtualBox scope=dapr.metrics type=log ver=1.9.4
+time="2023-01-24T14:01:38.588798077+01:00" level=info msg="standalone mode configured" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:01:38.588816013+01:00" level=info msg="app id: CarService" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:01:38.589428606+01:00" level=info msg="mTLS is disabled. Skipping certificate request and tls validation" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:01:38.589523482+01:00" level=info msg="Dapr trace sampler initialized: DaprTraceSampler(P=1.000000)" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:01:38.590599921+01:00" level=info msg="local service entry announced: CarService -> 10.0.2.15:46263" app_id=CarService instance=bastian-VirtualBox scope=dapr.contrib type=log ver=1.9.4
+time="2023-01-24T14:01:38.591384914+01:00" level=info msg="Initialized name resolution to mdns" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:01:38.591418112+01:00" level=info msg="loading components" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:01:38.597500576+01:00" level=info msg="component loaded. name: pubsub, type: pubsub.redis/v1" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:01:38.597807796+01:00" level=info msg="waiting for all outstanding components to be processed" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:01:38.599080162+01:00" level=info msg="detected actor state store: statestore" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:01:38.599162284+01:00" level=info msg="component loaded. name: statestore, type: state.redis/v1" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:01:38.599183116+01:00" level=info msg="all outstanding components processed" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:01:38.599195924+01:00" level=info msg="gRPC proxy enabled" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:01:38.599233455+01:00" level=info msg="enabled gRPC tracing middleware" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.grpc.api type=log ver=1.9.4
+time="2023-01-24T14:01:38.599246721+01:00" level=info msg="enabled gRPC metrics middleware" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.grpc.api type=log ver=1.9.4
+time="2023-01-24T14:01:38.599313531+01:00" level=info msg="API gRPC server is running on port 35511" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:01:38.599486852+01:00" level=info msg="enabled metrics http middleware" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.http type=log ver=1.9.4
+time="2023-01-24T14:01:38.599498417+01:00" level=info msg="enabled tracing http middleware" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.http type=log ver=1.9.4
+time="2023-01-24T14:01:38.599528391+01:00" level=info msg="http server is running on port 45699" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:01:38.599539136+01:00" level=info msg="The request body size parameter is: 4" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:01:38.599558041+01:00" level=info msg="enabled gRPC tracing middleware" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.grpc.internal type=log ver=1.9.4
+time="2023-01-24T14:01:38.599567484+01:00" level=info msg="enabled gRPC metrics middleware" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.grpc.internal type=log ver=1.9.4
+time="2023-01-24T14:01:38.599586879+01:00" level=info msg="internal gRPC server is running on port 46263" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:01:38.599610514+01:00" level=warning msg="App channel is not initialized. Did you configure an app-port?" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:01:38.599719758+01:00" level=info msg="actor runtime started. actor idle timeout: 1h0m0s. actor scan interval: 30s" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.actor type=log ver=1.9.4
+time="2023-01-24T14:01:38.5997378+01:00" level=warning msg="app channel not initialized, make sure -app-port is specified if pubsub subscription is required" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:01:38.599754617+01:00" level=warning msg="failed to read from bindings: app channel not initialized " app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:01:38.599768284+01:00" level=info msg="dapr initialized. Status: Running. Init Elapsed 10ms" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+ℹ️  Checking if Dapr sidecar is listening on GRPC port 35511
+ℹ️  Dapr sidecar is up and running.
+ℹ️  Updating metadata for app command: java -jar target/CarService-0.0.1-SNAPSHOT.jar com.daprdemo.CarService.CarServiceApplication
+✅  You're up and running! Both Dapr and your app logs will appear here.
+
+== APP == 
+== APP ==   .   ____          _            __ _ _
+== APP ==  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+== APP == ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+== APP ==  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+== APP ==   '  |____| .__|_| |_|_| |_\__, | / / / /
+== APP ==  =========|_|==============|___/=/_/_/_/
+== APP ==  :: Spring Boot ::                (v2.7.8)
+== APP == 
+== APP == 2023-01-24 14:01:40.418  INFO 27265 --- [           main] c.d.CarService.CarServiceApplication     : Starting CarServiceApplication v0.0.1-SNAPSHOT using Java 11.0.17 on bastian-VirtualBox with PID 27265 (/home/bastian/Desktop/dapr-resilience/CarService/target/CarService-0.0.1-SNAPSHOT.jar started by bastian in /home/bastian/Desktop/dapr-resilience/CarService)
+== APP == 2023-01-24 14:01:40.422  INFO 27265 --- [           main] c.d.CarService.CarServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+== APP == 2023-01-24 14:01:41.536  INFO 27265 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+== APP == 2023-01-24 14:01:41.546  INFO 27265 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+== APP == 2023-01-24 14:01:41.546  INFO 27265 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+== APP == 2023-01-24 14:01:41.632  INFO 27265 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+== APP == 2023-01-24 14:01:41.632  INFO 27265 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1107 ms
+== APP == 2023-01-24 14:01:42.069  INFO 27265 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+== APP == 2023-01-24 14:01:42.086  INFO 27265 --- [           main] c.d.CarService.CarServiceApplication     : Started CarServiceApplication in 2.152 seconds (JVM running for 2.571)
+ℹ️  
+terminated signal received: shutting down
+✅  Exited Dapr successfully
+✅  Exited App successfully
+ℹ️  Starting Dapr with id CarService. HTTP Port: 45563. gRPC Port: 42219
+ℹ️  Checking if Dapr sidecar is listening on HTTP port 45563
+time="2023-01-24T14:02:05.908523551+01:00" level=info msg="starting Dapr Runtime -- version 1.9.4 -- commit 576ac0348e56e25b906d9e7a5c817db451cc5b34" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:02:05.908873759+01:00" level=info msg="log level set to: info" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:02:05.909315202+01:00" level=info msg="metrics server started on :34391/" app_id=CarService instance=bastian-VirtualBox scope=dapr.metrics type=log ver=1.9.4
+time="2023-01-24T14:02:05.910954336+01:00" level=info msg="standalone mode configured" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:02:05.910971394+01:00" level=info msg="app id: CarService" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:02:05.91171843+01:00" level=info msg="mTLS is disabled. Skipping certificate request and tls validation" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:02:05.911953502+01:00" level=info msg="Dapr trace sampler initialized: DaprTraceSampler(P=1.000000)" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:02:05.913408089+01:00" level=info msg="local service entry announced: CarService -> 10.0.2.15:45703" app_id=CarService instance=bastian-VirtualBox scope=dapr.contrib type=log ver=1.9.4
+time="2023-01-24T14:02:05.914654836+01:00" level=info msg="Initialized name resolution to mdns" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:02:05.914711095+01:00" level=info msg="loading components" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:02:05.920233287+01:00" level=info msg="component loaded. name: pubsub, type: pubsub.redis/v1" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:02:05.920272515+01:00" level=info msg="waiting for all outstanding components to be processed" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:02:05.923931875+01:00" level=info msg="detected actor state store: statestore" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:02:05.924003389+01:00" level=info msg="component loaded. name: statestore, type: state.redis/v1" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:02:05.924024402+01:00" level=info msg="all outstanding components processed" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:02:05.924033064+01:00" level=info msg="gRPC proxy enabled" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:02:05.924204981+01:00" level=info msg="enabled gRPC tracing middleware" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.grpc.api type=log ver=1.9.4
+time="2023-01-24T14:02:05.924223911+01:00" level=info msg="enabled gRPC metrics middleware" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.grpc.api type=log ver=1.9.4
+time="2023-01-24T14:02:05.924310024+01:00" level=info msg="API gRPC server is running on port 42219" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:02:05.924715598+01:00" level=info msg="enabled metrics http middleware" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.http type=log ver=1.9.4
+time="2023-01-24T14:02:05.924733044+01:00" level=info msg="enabled tracing http middleware" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.http type=log ver=1.9.4
+time="2023-01-24T14:02:05.92481373+01:00" level=info msg="http server is running on port 45563" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:02:05.924828558+01:00" level=info msg="The request body size parameter is: 4" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:02:05.924849259+01:00" level=info msg="enabled gRPC tracing middleware" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.grpc.internal type=log ver=1.9.4
+time="2023-01-24T14:02:05.924861456+01:00" level=info msg="enabled gRPC metrics middleware" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.grpc.internal type=log ver=1.9.4
+time="2023-01-24T14:02:05.925027122+01:00" level=info msg="internal gRPC server is running on port 45703" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:02:05.925043914+01:00" level=warning msg="App channel is not initialized. Did you configure an app-port?" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:02:05.925197482+01:00" level=info msg="actor runtime started. actor idle timeout: 1h0m0s. actor scan interval: 30s" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime.actor type=log ver=1.9.4
+time="2023-01-24T14:02:05.925226323+01:00" level=warning msg="app channel not initialized, make sure -app-port is specified if pubsub subscription is required" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:02:05.925893982+01:00" level=warning msg="failed to read from bindings: app channel not initialized " app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:02:05.925909947+01:00" level=info msg="dapr initialized. Status: Running. Init Elapsed 14ms" app_id=CarService instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+ℹ️  Checking if Dapr sidecar is listening on GRPC port 42219
+ℹ️  Dapr sidecar is up and running.
+ℹ️  Updating metadata for app command: java -jar target/CarService-0.0.1-SNAPSHOT.jar com.daprdemo.CarService.CarServiceApplication
+✅  You're up and running! Both Dapr and your app logs will appear here.
+
+== APP == 
+== APP ==   .   ____          _            __ _ _
+== APP ==  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+== APP == ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+== APP ==  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+== APP ==   '  |____| .__|_| |_|_| |_\__, | / / / /
+== APP ==  =========|_|==============|___/=/_/_/_/
+== APP ==  :: Spring Boot ::                (v2.7.8)
+== APP == 
+== APP == 2023-01-24 14:02:07.837  INFO 27526 --- [           main] c.d.CarService.CarServiceApplication     : Starting CarServiceApplication v0.0.1-SNAPSHOT using Java 11.0.17 on bastian-VirtualBox with PID 27526 (/home/bastian/Desktop/dapr-resilience/CarService/target/CarService-0.0.1-SNAPSHOT.jar started by bastian in /home/bastian/Desktop/dapr-resilience/CarService)
+== APP == 2023-01-24 14:02:07.850  INFO 27526 --- [           main] c.d.CarService.CarServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+== APP == 2023-01-24 14:02:08.776  INFO 27526 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+== APP == 2023-01-24 14:02:08.788  INFO 27526 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+== APP == 2023-01-24 14:02:08.788  INFO 27526 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+== APP == 2023-01-24 14:02:08.858  INFO 27526 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+== APP == 2023-01-24 14:02:08.859  INFO 27526 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 927 ms
+== APP == 2023-01-24 14:02:09.247  INFO 27526 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+== APP == 2023-01-24 14:02:09.259  INFO 27526 --- [           main] c.d.CarService.CarServiceApplication     : Started CarServiceApplication in 1.91 seconds (JVM running for 2.402)
+== APP == 2023-01-24 14:08:12.825  INFO 27526 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+== APP == 2023-01-24 14:08:12.826  INFO 27526 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+== APP == 2023-01-24 14:08:12.828  INFO 27526 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+== APP == enabled is true
+== APP == enabled is true
+== APP == enabled is true
+ℹ️  
+terminated signal received: shutting down
+✅  Exited Dapr successfully
+✅  Exited App successfully

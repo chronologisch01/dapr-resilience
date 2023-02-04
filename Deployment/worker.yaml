@@ -1,0 +1,46 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: worker
+  labels:
+    app: worker
+spec:
+  selector:
+    app: worker
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: LoadBalancer
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: worker
+  labels:
+    app: worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: worker
+  template:
+    metadata:
+      labels:
+        app: worker
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: "worker"
+        dapr.io/enable-api-logging: "true"
+        dapr.io/app-port: "8080"
+    spec:
+      containers:
+        - name: worker
+          image: worker
+          env:
+            - name: APP_PORT
+              value: "8080"
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: Never

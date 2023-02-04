@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: carservice
+  labels:
+    app: carservice
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: carservice
+  template:
+    metadata:
+      labels:
+        app: carservice
+      annotations:
+        dapr.io/enabled: "true"
+        dapr.io/app-id: "carservice"
+        dapr.io/enable-api-logging: "true"
+        dapr.io/app-port: "8080"
+        dapr.io/metrics-port: "9090"
+        dapr.io/enable-app-health-check: "true"
+        dapr.io/config: "config"
+        dapr.io/log-as-json: "true"
+    spec:
+      containers:
+        - name: carservice
+          image: carservice-new
+          env:
+            - name: APP_PORT
+              value: "8080"
+          imagePullPolicy: Never

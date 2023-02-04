@@ -1,0 +1,767 @@
+ℹ️  Starting Dapr with id Worker. HTTP Port: 36961. gRPC Port: 43601
+ℹ️  Checking if Dapr sidecar is listening on HTTP port 36961
+time="2023-01-24T14:03:45.782398207+01:00" level=info msg="starting Dapr Runtime -- version 1.9.4 -- commit 576ac0348e56e25b906d9e7a5c817db451cc5b34" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:03:45.782448167+01:00" level=info msg="log level set to: info" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:03:45.782671302+01:00" level=info msg="metrics server started on :37647/" app_id=Worker instance=bastian-VirtualBox scope=dapr.metrics type=log ver=1.9.4
+time="2023-01-24T14:03:45.783278179+01:00" level=info msg="standalone mode configured" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:03:45.783344293+01:00" level=info msg="app id: Worker" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:03:45.783704472+01:00" level=info msg="mTLS is disabled. Skipping certificate request and tls validation" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:03:45.783795499+01:00" level=info msg="Dapr trace sampler initialized: DaprTraceSampler(P=1.000000)" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:03:45.785285972+01:00" level=info msg="local service entry announced: Worker -> 10.0.2.15:37119" app_id=Worker instance=bastian-VirtualBox scope=dapr.contrib type=log ver=1.9.4
+time="2023-01-24T14:03:45.785312341+01:00" level=info msg="Initialized name resolution to mdns" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:03:45.78533304+01:00" level=info msg="loading components" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:03:45.803885473+01:00" level=info msg="component loaded. name: pubsub, type: pubsub.redis/v1" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:03:45.804162557+01:00" level=info msg="waiting for all outstanding components to be processed" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:03:45.807584568+01:00" level=info msg="detected actor state store: statestore" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:03:45.807624165+01:00" level=info msg="component loaded. name: statestore, type: state.redis/v1" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:03:45.807638859+01:00" level=info msg="all outstanding components processed" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:03:45.807648807+01:00" level=info msg="gRPC proxy enabled" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:03:45.807685566+01:00" level=info msg="enabled gRPC tracing middleware" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.grpc.api type=log ver=1.9.4
+time="2023-01-24T14:03:45.807698929+01:00" level=info msg="enabled gRPC metrics middleware" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.grpc.api type=log ver=1.9.4
+time="2023-01-24T14:03:45.807744184+01:00" level=info msg="API gRPC server is running on port 43601" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:03:45.807922954+01:00" level=info msg="enabled metrics http middleware" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.http type=log ver=1.9.4
+time="2023-01-24T14:03:45.807935881+01:00" level=info msg="enabled tracing http middleware" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.http type=log ver=1.9.4
+time="2023-01-24T14:03:45.808119345+01:00" level=info msg="http server is running on port 36961" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:03:45.808144305+01:00" level=info msg="The request body size parameter is: 4" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:03:45.808169086+01:00" level=info msg="enabled gRPC tracing middleware" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.grpc.internal type=log ver=1.9.4
+time="2023-01-24T14:03:45.808179869+01:00" level=info msg="enabled gRPC metrics middleware" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.grpc.internal type=log ver=1.9.4
+time="2023-01-24T14:03:45.808203173+01:00" level=info msg="internal gRPC server is running on port 37119" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:03:45.808211154+01:00" level=warning msg="App channel is not initialized. Did you configure an app-port?" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:03:45.808284271+01:00" level=info msg="actor runtime started. actor idle timeout: 1h0m0s. actor scan interval: 30s" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.actor type=log ver=1.9.4
+time="2023-01-24T14:03:45.808304051+01:00" level=warning msg="app channel not initialized, make sure -app-port is specified if pubsub subscription is required" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:03:45.80832098+01:00" level=warning msg="failed to read from bindings: app channel not initialized " app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:03:45.808328576+01:00" level=info msg="dapr initialized. Status: Running. Init Elapsed 25ms" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+ℹ️  Checking if Dapr sidecar is listening on GRPC port 43601
+ℹ️  Dapr sidecar is up and running.
+ℹ️  Updating metadata for app command: java -jar target/Worker-0.0.1-SNAPSHOT.jar com.daprdemo.Worker.WorkerApplication
+✅  You're up and running! Both Dapr and your app logs will appear here.
+
+== APP == 
+== APP ==   .   ____          _            __ _ _
+== APP ==  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+== APP == ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+== APP ==  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+== APP ==   '  |____| .__|_| |_|_| |_\__, | / / / /
+== APP ==  =========|_|==============|___/=/_/_/_/
+== APP ==  :: Spring Boot ::                (v2.7.8)
+== APP == 
+== APP == 2023-01-24 14:03:47.721  INFO 28351 --- [           main] com.daprdemo.Worker.WorkerApplication    : Starting WorkerApplication v0.0.1-SNAPSHOT using Java 11.0.17 on bastian-VirtualBox with PID 28351 (/home/bastian/Desktop/dapr-resilience/Worker/target/Worker-0.0.1-SNAPSHOT.jar started by bastian in /home/bastian/Desktop/dapr-resilience/Worker)
+== APP == 2023-01-24 14:03:47.727  INFO 28351 --- [           main] com.daprdemo.Worker.WorkerApplication    : No active profile set, falling back to 1 default profile: "default"
+== APP == 2023-01-24 14:03:48.815  INFO 28351 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+== APP == 2023-01-24 14:03:48.826  INFO 28351 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+== APP == 2023-01-24 14:03:48.827  INFO 28351 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+== APP == 2023-01-24 14:03:48.904  INFO 28351 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+== APP == 2023-01-24 14:03:48.904  INFO 28351 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1074 ms
+== APP == 2023-01-24 14:03:49.469  WARN 28351 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+== APP == 2023-01-24 14:03:49.472  INFO 28351 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+== APP == 2023-01-24 14:03:49.487  INFO 28351 --- [           main] ConditionEvaluationReportLoggingListener : 
+== APP == 
+== APP == Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+== APP == 2023-01-24 14:03:49.509 ERROR 28351 --- [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+== APP == 
+== APP == ***************************
+== APP == APPLICATION FAILED TO START
+== APP == ***************************
+== APP == 
+== APP == Description:
+== APP == 
+== APP == Web server failed to start. Port 8080 was already in use.
+== APP == 
+== APP == Action:
+== APP == 
+== APP == Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+== APP == 
+❌  The App process exited with error code: exit status 1
+ℹ️  
+terminated signal received: shutting down
+✅  Exited Dapr successfully
+❌  Error exiting App: exit status 1
+ℹ️  Starting Dapr with id Worker. HTTP Port: 40377. gRPC Port: 38485
+ℹ️  Checking if Dapr sidecar is listening on HTTP port 40377
+time="2023-01-24T14:06:32.478185953+01:00" level=info msg="starting Dapr Runtime -- version 1.9.4 -- commit 576ac0348e56e25b906d9e7a5c817db451cc5b34" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:06:32.478263403+01:00" level=info msg="log level set to: info" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:06:32.478324161+01:00" level=info msg="metrics server started on :39367/" app_id=Worker instance=bastian-VirtualBox scope=dapr.metrics type=log ver=1.9.4
+time="2023-01-24T14:06:32.478770408+01:00" level=info msg="standalone mode configured" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:06:32.47883184+01:00" level=info msg="app id: Worker" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:06:32.479199693+01:00" level=info msg="mTLS is disabled. Skipping certificate request and tls validation" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:06:32.479289963+01:00" level=info msg="Dapr trace sampler initialized: DaprTraceSampler(P=1.000000)" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:06:32.480016479+01:00" level=info msg="local service entry announced: Worker -> 10.0.2.15:42133" app_id=Worker instance=bastian-VirtualBox scope=dapr.contrib type=log ver=1.9.4
+time="2023-01-24T14:06:32.480043176+01:00" level=info msg="Initialized name resolution to mdns" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:06:32.480066133+01:00" level=info msg="loading components" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:06:32.485999932+01:00" level=info msg="component loaded. name: pubsub, type: pubsub.redis/v1" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:06:32.486414642+01:00" level=info msg="waiting for all outstanding components to be processed" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:06:32.492090542+01:00" level=info msg="detected actor state store: statestore" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:06:32.492116997+01:00" level=info msg="component loaded. name: statestore, type: state.redis/v1" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:06:32.49220783+01:00" level=info msg="all outstanding components processed" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:06:32.492232236+01:00" level=info msg="gRPC proxy enabled" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:06:32.492389076+01:00" level=info msg="enabled gRPC tracing middleware" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.grpc.api type=log ver=1.9.4
+time="2023-01-24T14:06:32.49240519+01:00" level=info msg="enabled gRPC metrics middleware" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.grpc.api type=log ver=1.9.4
+time="2023-01-24T14:06:32.492495745+01:00" level=info msg="API gRPC server is running on port 38485" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:06:32.492656182+01:00" level=info msg="enabled metrics http middleware" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.http type=log ver=1.9.4
+time="2023-01-24T14:06:32.492668197+01:00" level=info msg="enabled tracing http middleware" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.http type=log ver=1.9.4
+time="2023-01-24T14:06:32.492691993+01:00" level=info msg="http server is running on port 40377" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:06:32.492700111+01:00" level=info msg="The request body size parameter is: 4" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:06:32.492714412+01:00" level=info msg="enabled gRPC tracing middleware" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.grpc.internal type=log ver=1.9.4
+time="2023-01-24T14:06:32.49272259+01:00" level=info msg="enabled gRPC metrics middleware" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.grpc.internal type=log ver=1.9.4
+time="2023-01-24T14:06:32.492745804+01:00" level=info msg="internal gRPC server is running on port 42133" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:06:32.492756467+01:00" level=warning msg="App channel is not initialized. Did you configure an app-port?" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:06:32.492854486+01:00" level=info msg="actor runtime started. actor idle timeout: 1h0m0s. actor scan interval: 30s" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.actor type=log ver=1.9.4
+time="2023-01-24T14:06:32.492872805+01:00" level=warning msg="app channel not initialized, make sure -app-port is specified if pubsub subscription is required" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:06:32.492890935+01:00" level=warning msg="failed to read from bindings: app channel not initialized " app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:06:32.492898048+01:00" level=info msg="dapr initialized. Status: Running. Init Elapsed 14ms" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+ℹ️  Checking if Dapr sidecar is listening on GRPC port 38485
+ℹ️  Dapr sidecar is up and running.
+ℹ️  Updating metadata for app command: java -jar target/Worker-0.0.1-SNAPSHOT.jar com.daprdemo.Worker.WorkerApplication
+✅  You're up and running! Both Dapr and your app logs will appear here.
+
+== APP == 
+== APP ==   .   ____          _            __ _ _
+== APP ==  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+== APP == ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+== APP ==  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+== APP ==   '  |____| .__|_| |_|_| |_\__, | / / / /
+== APP ==  =========|_|==============|___/=/_/_/_/
+== APP ==  :: Spring Boot ::                (v2.7.8)
+== APP == 
+== APP == 2023-01-24 14:06:34.491  INFO 29496 --- [           main] com.daprdemo.Worker.WorkerApplication    : Starting WorkerApplication v0.0.1-SNAPSHOT using Java 11.0.17 on bastian-VirtualBox with PID 29496 (/home/bastian/Desktop/dapr-resilience/Worker/target/Worker-0.0.1-SNAPSHOT.jar started by bastian in /home/bastian/Desktop/dapr-resilience/Worker)
+== APP == 2023-01-24 14:06:34.494  INFO 29496 --- [           main] com.daprdemo.Worker.WorkerApplication    : No active profile set, falling back to 1 default profile: "default"
+== APP == 2023-01-24 14:06:35.514  INFO 29496 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+== APP == 2023-01-24 14:06:35.528  INFO 29496 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+== APP == 2023-01-24 14:06:35.528  INFO 29496 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+== APP == 2023-01-24 14:06:35.619  INFO 29496 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+== APP == 2023-01-24 14:06:35.619  INFO 29496 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1024 ms
+== APP == 2023-01-24 14:06:36.172  INFO 29496 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+== APP == 2023-01-24 14:06:36.185  INFO 29496 --- [           main] com.daprdemo.Worker.WorkerApplication    : Started WorkerApplication in 2.315 seconds (JVM running for 2.786)
+== APP == 2023-01-24 14:07:14.655  INFO 29496 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+== APP == 2023-01-24 14:07:14.658  INFO 29496 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+== APP == 2023-01-24 14:07:14.662  INFO 29496 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+ℹ️  
+terminated signal received: shutting down
+✅  Exited Dapr successfully
+✅  Exited App successfully
+ℹ️  Starting Dapr with id Worker. HTTP Port: 42505. gRPC Port: 38411
+ℹ️  Checking if Dapr sidecar is listening on HTTP port 42505
+time="2023-01-24T14:09:52.394303348+01:00" level=info msg="starting Dapr Runtime -- version 1.9.4 -- commit 576ac0348e56e25b906d9e7a5c817db451cc5b34" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:09:52.398224735+01:00" level=info msg="log level set to: info" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:09:52.399203131+01:00" level=info msg="metrics server started on :33439/" app_id=Worker instance=bastian-VirtualBox scope=dapr.metrics type=log ver=1.9.4
+time="2023-01-24T14:09:52.399870393+01:00" level=info msg="standalone mode configured" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:09:52.399939316+01:00" level=info msg="app id: Worker" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:09:52.400305281+01:00" level=info msg="mTLS is disabled. Skipping certificate request and tls validation" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:09:52.400411556+01:00" level=info msg="Dapr trace sampler initialized: DaprTraceSampler(P=1.000000)" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:09:52.402042539+01:00" level=info msg="local service entry announced: Worker -> 10.0.2.15:34063" app_id=Worker instance=bastian-VirtualBox scope=dapr.contrib type=log ver=1.9.4
+time="2023-01-24T14:09:52.403104142+01:00" level=info msg="Initialized name resolution to mdns" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:09:52.403133327+01:00" level=info msg="loading components" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:09:52.414689427+01:00" level=info msg="component loaded. name: pubsub, type: pubsub.redis/v1" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:09:52.414837922+01:00" level=info msg="waiting for all outstanding components to be processed" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:09:52.417140454+01:00" level=info msg="detected actor state store: statestore" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:09:52.417356888+01:00" level=info msg="component loaded. name: statestore, type: state.redis/v1" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:09:52.417385827+01:00" level=info msg="all outstanding components processed" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:09:52.417397239+01:00" level=info msg="gRPC proxy enabled" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:09:52.418148993+01:00" level=info msg="enabled gRPC tracing middleware" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.grpc.api type=log ver=1.9.4
+time="2023-01-24T14:09:52.418168229+01:00" level=info msg="enabled gRPC metrics middleware" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.grpc.api type=log ver=1.9.4
+time="2023-01-24T14:09:52.420066792+01:00" level=info msg="API gRPC server is running on port 38411" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:09:52.422054342+01:00" level=info msg="enabled metrics http middleware" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.http type=log ver=1.9.4
+time="2023-01-24T14:09:52.422165208+01:00" level=info msg="enabled tracing http middleware" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.http type=log ver=1.9.4
+time="2023-01-24T14:09:52.422258966+01:00" level=info msg="http server is running on port 42505" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:09:52.422276213+01:00" level=info msg="The request body size parameter is: 4" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:09:52.422301325+01:00" level=info msg="enabled gRPC tracing middleware" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.grpc.internal type=log ver=1.9.4
+time="2023-01-24T14:09:52.422311777+01:00" level=info msg="enabled gRPC metrics middleware" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.grpc.internal type=log ver=1.9.4
+time="2023-01-24T14:09:52.422337912+01:00" level=info msg="internal gRPC server is running on port 34063" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:09:52.42234564+01:00" level=warning msg="App channel is not initialized. Did you configure an app-port?" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:09:52.422487016+01:00" level=info msg="actor runtime started. actor idle timeout: 1h0m0s. actor scan interval: 30s" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.actor type=log ver=1.9.4
+time="2023-01-24T14:09:52.422513882+01:00" level=warning msg="app channel not initialized, make sure -app-port is specified if pubsub subscription is required" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:09:52.422549787+01:00" level=warning msg="failed to read from bindings: app channel not initialized " app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:09:52.422563185+01:00" level=info msg="dapr initialized. Status: Running. Init Elapsed 22ms" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+ℹ️  Checking if Dapr sidecar is listening on GRPC port 38411
+ℹ️  Dapr sidecar is up and running.
+ℹ️  Updating metadata for app command: java -jar target/Worker-0.0.1-SNAPSHOT.jar com.daprdemo.Worker.WorkerApplication
+✅  You're up and running! Both Dapr and your app logs will appear here.
+
+== APP == 
+== APP ==   .   ____          _            __ _ _
+== APP ==  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+== APP == ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+== APP ==  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+== APP ==   '  |____| .__|_| |_|_| |_\__, | / / / /
+== APP ==  =========|_|==============|___/=/_/_/_/
+== APP ==  :: Spring Boot ::                (v2.7.8)
+== APP == 
+== APP == 2023-01-24 14:09:54.410  INFO 31031 --- [           main] com.daprdemo.Worker.WorkerApplication    : Starting WorkerApplication v0.0.1-SNAPSHOT using Java 11.0.17 on bastian-VirtualBox with PID 31031 (/home/bastian/Desktop/dapr-resilience/Worker/target/Worker-0.0.1-SNAPSHOT.jar started by bastian in /home/bastian/Desktop/dapr-resilience/Worker)
+== APP == 2023-01-24 14:09:54.416  INFO 31031 --- [           main] com.daprdemo.Worker.WorkerApplication    : No active profile set, falling back to 1 default profile: "default"
+== APP == 2023-01-24 14:09:55.717  INFO 31031 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+== APP == 2023-01-24 14:09:55.727  INFO 31031 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+== APP == 2023-01-24 14:09:55.728  INFO 31031 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+== APP == 2023-01-24 14:09:55.807  INFO 31031 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+== APP == 2023-01-24 14:09:55.807  INFO 31031 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1272 ms
+== APP == 2023-01-24 14:09:56.542  INFO 31031 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+== APP == 2023-01-24 14:09:56.562  INFO 31031 --- [           main] com.daprdemo.Worker.WorkerApplication    : Started WorkerApplication in 2.731 seconds (JVM running for 3.253)
+== APP == 2023-01-24 14:10:07.846  INFO 31031 --- [nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+== APP == 2023-01-24 14:10:07.847  INFO 31031 --- [nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+== APP == 2023-01-24 14:10:07.849  INFO 31031 --- [nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+ℹ️  
+terminated signal received: shutting down
+✅  Exited Dapr successfully
+✅  Exited App successfully
+ℹ️  Starting Dapr with id Worker. HTTP Port: 38079. gRPC Port: 33983
+ℹ️  Checking if Dapr sidecar is listening on HTTP port 38079
+time="2023-01-24T14:11:08.188805688+01:00" level=info msg="starting Dapr Runtime -- version 1.9.4 -- commit 576ac0348e56e25b906d9e7a5c817db451cc5b34" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:11:08.188841312+01:00" level=info msg="log level set to: info" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:11:08.189149136+01:00" level=info msg="metrics server started on :43415/" app_id=Worker instance=bastian-VirtualBox scope=dapr.metrics type=log ver=1.9.4
+time="2023-01-24T14:11:08.189867346+01:00" level=info msg="standalone mode configured" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:11:08.18988373+01:00" level=info msg="app id: Worker" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:11:08.190236112+01:00" level=info msg="mTLS is disabled. Skipping certificate request and tls validation" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:11:08.190525646+01:00" level=info msg="Dapr trace sampler initialized: DaprTraceSampler(P=1.000000)" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:11:08.19136773+01:00" level=info msg="local service entry announced: Worker -> 10.0.2.15:34379" app_id=Worker instance=bastian-VirtualBox scope=dapr.contrib type=log ver=1.9.4
+time="2023-01-24T14:11:08.191392816+01:00" level=info msg="Initialized name resolution to mdns" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:11:08.191413278+01:00" level=info msg="loading components" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:11:08.200782205+01:00" level=info msg="component loaded. name: pubsub, type: pubsub.redis/v1" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:11:08.200897364+01:00" level=info msg="waiting for all outstanding components to be processed" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:11:08.202222793+01:00" level=info msg="detected actor state store: statestore" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:11:08.202432367+01:00" level=info msg="component loaded. name: statestore, type: state.redis/v1" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:11:08.20245411+01:00" level=info msg="all outstanding components processed" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:11:08.202467628+01:00" level=info msg="gRPC proxy enabled" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:11:08.20250347+01:00" level=info msg="enabled gRPC tracing middleware" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.grpc.api type=log ver=1.9.4
+time="2023-01-24T14:11:08.202516498+01:00" level=info msg="enabled gRPC metrics middleware" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.grpc.api type=log ver=1.9.4
+time="2023-01-24T14:11:08.202570848+01:00" level=info msg="API gRPC server is running on port 33983" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:11:08.202783649+01:00" level=info msg="enabled metrics http middleware" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.http type=log ver=1.9.4
+time="2023-01-24T14:11:08.202798925+01:00" level=info msg="enabled tracing http middleware" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.http type=log ver=1.9.4
+time="2023-01-24T14:11:08.202821899+01:00" level=info msg="http server is running on port 38079" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:11:08.20282988+01:00" level=info msg="The request body size parameter is: 4" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:11:08.202848363+01:00" level=info msg="enabled gRPC tracing middleware" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.grpc.internal type=log ver=1.9.4
+time="2023-01-24T14:11:08.202857858+01:00" level=info msg="enabled gRPC metrics middleware" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.grpc.internal type=log ver=1.9.4
+time="2023-01-24T14:11:08.202874851+01:00" level=info msg="internal gRPC server is running on port 34379" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:11:08.202881851+01:00" level=warning msg="App channel is not initialized. Did you configure an app-port?" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:11:08.203025813+01:00" level=info msg="actor runtime started. actor idle timeout: 1h0m0s. actor scan interval: 30s" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime.actor type=log ver=1.9.4
+time="2023-01-24T14:11:08.203044982+01:00" level=warning msg="app channel not initialized, make sure -app-port is specified if pubsub subscription is required" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:11:08.203430006+01:00" level=warning msg="failed to read from bindings: app channel not initialized " app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+time="2023-01-24T14:11:08.203445738+01:00" level=info msg="dapr initialized. Status: Running. Init Elapsed 13ms" app_id=Worker instance=bastian-VirtualBox scope=dapr.runtime type=log ver=1.9.4
+ℹ️  Checking if Dapr sidecar is listening on GRPC port 33983
+ℹ️  Dapr sidecar is up and running.
+ℹ️  Updating metadata for app command: java -jar target/Worker-0.0.1-SNAPSHOT.jar com.daprdemo.Worker.WorkerApplication
+✅  You're up and running! Both Dapr and your app logs will appear here.
+
+== APP == 
+== APP ==   .   ____          _            __ _ _
+== APP ==  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+== APP == ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+== APP ==  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+== APP ==   '  |____| .__|_| |_|_| |_\__, | / / / /
+== APP ==  =========|_|==============|___/=/_/_/_/
+== APP ==  :: Spring Boot ::                (v2.7.8)
+== APP == 
+== APP == 2023-01-24 14:11:10.331  INFO 31786 --- [           main] com.daprdemo.Worker.WorkerApplication    : Starting WorkerApplication v0.0.1-SNAPSHOT using Java 11.0.17 on bastian-VirtualBox with PID 31786 (/home/bastian/Desktop/dapr-resilience/Worker/target/Worker-0.0.1-SNAPSHOT.jar started by bastian in /home/bastian/Desktop/dapr-resilience/Worker)
+== APP == 2023-01-24 14:11:10.335  INFO 31786 --- [           main] com.daprdemo.Worker.WorkerApplication    : No active profile set, falling back to 1 default profile: "default"
+== APP == 2023-01-24 14:11:11.485  INFO 31786 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+== APP == 2023-01-24 14:11:11.495  INFO 31786 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+== APP == 2023-01-24 14:11:11.495  INFO 31786 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.71]
+== APP == 2023-01-24 14:11:11.578  INFO 31786 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+== APP == 2023-01-24 14:11:11.578  INFO 31786 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1130 ms
+== APP == 2023-01-24 14:11:12.119  INFO 31786 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+== APP == 2023-01-24 14:11:12.129  INFO 31786 --- [           main] com.daprdemo.Worker.WorkerApplication    : Started WorkerApplication in 2.432 seconds (JVM running for 3.01)
+== APP == 2023-01-24 14:11:24.265  INFO 31786 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+== APP == 2023-01-24 14:11:24.267  INFO 31786 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+== APP == 2023-01-24 14:11:24.269  INFO 31786 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+== APP == result is MonoFlatMap
+ℹ️  
+terminated signal received: shutting down
+✅  Exited Dapr successfully
+✅  Exited App successfully
