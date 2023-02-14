@@ -1,3 +1,18 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: carservice
+  labels:
+    app: carservice
+spec:
+  selector:
+    app: carservice
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: LoadBalancer
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -5,7 +20,7 @@ metadata:
   labels:
     app: carservice
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: carservice
@@ -15,17 +30,21 @@ spec:
         app: carservice
       annotations:
         dapr.io/enabled: "true"
+        dapr.io/config: "config"
         dapr.io/app-id: "carservice"
         dapr.io/enable-api-logging: "true"
         dapr.io/app-port: "8080"
-        dapr.io/metrics-port: "9090"
+#        dapr.io/metrics-port: "9090"
+        dapr.io/app-protocol: "http"
         dapr.io/enable-app-health-check: "true"
-        dapr.io/config: "config"
+        dapr.io/app-health-probe-interval: "3"
+        dapr.io/app-health-probe-timeout: "200"
+        dapr.io/app-health-threshold: "2"
         dapr.io/log-as-json: "true"
     spec:
       containers:
         - name: carservice
-          image: carservice-new
+          image: carservice
           env:
             - name: APP_PORT
               value: "8080"

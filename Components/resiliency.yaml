@@ -41,11 +41,9 @@ spec:
   targets:
     apps:
       carservice:
-        timeout: general
-        retry: retryForever
+#        timeout: general
+#        retry: retryForever
         circuitBreaker: example
-        circuitBreakerScope: both
-        circuitBreakerCacheSize: 5000
           # circuit breakers for services are scoped app instance.
           # when a breaker is tripped, that route is removed from load balancing for the configured `timeout` duration.
 #          circuitBreaker: simpleCB

@@ -31,6 +31,7 @@ spec:
         app: worker
       annotations:
         dapr.io/enabled: "true"
+        dapr.io/config: "config"
         dapr.io/app-id: "worker"
         dapr.io/enable-api-logging: "true"
         dapr.io/app-port: "8080"
