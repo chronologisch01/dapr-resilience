@@ -1,0 +1,34 @@
+GET http://localhost:3500/v1.0/invoke/carservice/method/car/1
+
+HTTP/1.1 400 Bad Request
+Server: fasthttp
+Date: Wed, 22 Feb 2023 15:06:03 GMT
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 18
+Traceparent: 00-00000000000000000000000000000000-0000000000000000-00
+Connection: close
+
+API is not enabled
+---
+GET http://localhost:3500/v1.0/invoke/carservice/method/car/1
+
+HTTP/1.1 500 Internal Server Error
+Server: fasthttp
+Date: Wed, 22 Feb 2023 15:06:07 GMT
+Content-Type: application/json
+Content-Length: 69
+Traceparent: 00-00000000000000000000000000000000-0000000000000000-00
+
+{"errorCode":"ERR_DIRECT_INVOKE","message":"circuit breaker is open"}
+---
+GET http://localhost:3500/v1.0/invoke/carservice/method/car/1
+
+HTTP/1.1 400 Bad Request
+Server: fasthttp
+Date: Wed, 22 Feb 2023 15:06:13 GMT
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 18
+Traceparent: 00-00000000000000000000000000000000-0000000000000000-00
+Connection: close
+
+API is not enabled
