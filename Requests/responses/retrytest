@@ -1,0 +1,12 @@
+GET http://localhost:3500/v1.0/invoke/carservice/method/retryTest
+
+HTTP/1.1 200 OK
+Server: fasthttp
+Date: Wed, 22 Feb 2023 14:16:46 GMT
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 24
+Traceparent: 00-00000000000000000000000000000000-0000000000000000-00
+Connection: close
+
+Retry Test was requested
+This took 12,098109 seconds

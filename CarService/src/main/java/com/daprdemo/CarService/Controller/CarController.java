@@ -25,7 +25,7 @@ public class CarController {
     @GetMapping("/retryTest")
     public ResponseEntity<String> retryTest(){
         if(storageService.invoke()){
-            return ResponseEntity.ok().build();
+            return ResponseEntity.ok().body("Retry Test was requested");
         }
         return ResponseEntity.badRequest().build();
     }
