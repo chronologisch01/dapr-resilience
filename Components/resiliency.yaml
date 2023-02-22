@@ -21,7 +21,7 @@ spec:
     retries:
       pubsubRetry:
         policy: constant
-        duration: 1s
+        duration: 3s
         maxRetries: 10
 
       retryForever:
@@ -33,8 +33,8 @@ spec:
       example:
         maxRequests: 1
         interval: 8s
-        timeout: 45s
-        trip: consecutiveFailures > 8
+        timeout: 10s
+        trip: consecutiveFailures >= 1
 
 
 
@@ -42,7 +42,7 @@ spec:
     apps:
       carservice:
 #        timeout: general
-#        retry: retryForever
+#        retry: pubsubRetry
         circuitBreaker: example
           # circuit breakers for services are scoped app instance.
           # when a breaker is tripped, that route is removed from load balancing for the configured `timeout` duration.

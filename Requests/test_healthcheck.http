@@ -1,0 +1,18 @@
+POST http://localhost:8080/enabled/false
+Content-Type: application/json
+
+###
+GET http://localhost:3500/v1.0/invoke/carservice/method/car/1
+Accept: application/json
+
+###
+GET http://localhost:8080/car/1
+Accept: application/json
+
+###
+GET http://localhost:3500/v1.0/invoke/carservice/method/car/1
+Accept: application/json
+
+###
+http://localhost:3500/v1.0/invoke/carservice/method/car/1
+

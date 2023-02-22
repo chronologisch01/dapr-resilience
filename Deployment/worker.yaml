@@ -35,6 +35,7 @@ spec:
         dapr.io/app-id: "worker"
         dapr.io/enable-api-logging: "true"
         dapr.io/app-port: "8080"
+        dapr.io/log-as-json: "true"
     spec:
       containers:
         - name: worker

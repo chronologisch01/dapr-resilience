@@ -1,6 +1,6 @@
 package com.daprdemo.CarService.Controller;
 
-import com.daprdemo.CarService.Services.EnabledService;
+import com.daprdemo.CarService.Services.InMemoryStorageService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,25 +19,33 @@ public class CarController {
     Logger logger = LoggerFactory.getLogger(CarController.class);
 
     @Autowired
-    EnabledService enabledService;
+    InMemoryStorageService storageService;
 
+
+    @GetMapping("/retryTest")
+    public ResponseEntity<String> retryTest(){
+        if(storageService.invoke()){
+            return ResponseEntity.ok().build();
+        }
+        return ResponseEntity.badRequest().build();
+    }
 
     @GetMapping("/car/{id}")
     public ResponseEntity<String> getCar(@PathVariable String id){
-        logger.info("This is a log for id "+ id);
-        System.out.println("enabled is "+ enabledService.isEnabled()+ " and request id is " + id);
-        if(!enabledService.isEnabled()) return ResponseEntity.badRequest().body("API is not enabled");
+        logger.info("Car with id " + id + " has been requested");
+        if(!storageService.isEnabled()) return ResponseEntity.badRequest().body("API is not enabled");
         return ResponseEntity.of(Optional.of("You have successfully requested a car with the id: " + id));
     }
 
     @GetMapping("/health")
     public ResponseEntity<String> getHealth(){
-        return getCar("1");
+        if(!storageService.isEnabled()) return ResponseEntity.badRequest().body("Unhealthy");
+        return ResponseEntity.ok().body("Healthy");
     }
 
     @PostMapping("/enabled/{enabled}")
     public String setEnabled(@PathVariable boolean enabled){
-        enabledService.setEnabled(enabled);
-        return "Enabled set to "+ enabledService.isEnabled();
+        storageService.setEnabled(enabled);
+        return "Enabled set to "+ storageService.isEnabled();
     }
 }
