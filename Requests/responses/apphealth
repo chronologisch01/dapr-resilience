@@ -1,0 +1,49 @@
+GET http://localhost:3500/v1.0/invoke/carservice/method/car/1
+
+HTTP/1.1 200 OK
+Server: fasthttp
+Date: Thu, 23 Feb 2023 09:31:48 GMT
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 52
+Traceparent: 00-00000000000000000000000000000000-0000000000000000-00
+
+You have successfully requested a car with the id: 1
+---
+POST http://localhost:8080/enabled/false
+
+HTTP/1.1 200
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 20
+Date: Thu, 23 Feb 2023 09:32:06 GMT
+
+Enabled set to false
+---
+GET http://localhost:3500/v1.0/invoke/carservice/method/car/1
+
+HTTP/1.1 500 Internal Server Error
+Server: fasthttp
+Date: Thu, 23 Feb 2023 09:32:21 GMT
+Content-Type: application/json
+Content-Length: 146
+Traceparent: 00-00000000000000000000000000000000-0000000000000000-00
+
+{"errorCode":"ERR_DIRECT_INVOKE","message":"fail to invoke, id: carservice, err: rpc error: code = Internal desc = app is not in a healthy state"}
+---
+POST http://localhost:8080/enabled/true
+
+HTTP/1.1 200
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 19
+Date: Thu, 23 Feb 2023 09:32:34 GMT
+
+Enabled set to true
+---
+GET http://localhost:3500/v1.0/invoke/carservice/method/car/1
+HTTP/1.1 200 OK
+Server: fasthttp
+Date: Thu, 23 Feb 2023 09:33:00 GMT
+Content-Type: text/plain;charset=UTF-8
+Content-Length: 52
+Traceparent: 00-00000000000000000000000000000000-0000000000000000-00
+
+You have successfully requested a car with the id: 1
