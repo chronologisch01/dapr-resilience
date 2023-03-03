@@ -30,9 +30,3 @@ spec:
             - name: APP_PORT
               value: "8080"
           imagePullPolicy: Never
-          readinessProbe:
-            httpGet:
-              path: /health
-              port: 8080
-            initialDelaySeconds: 10
-            periodSeconds: 5
