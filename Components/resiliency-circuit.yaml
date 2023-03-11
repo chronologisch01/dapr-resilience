@@ -1,0 +1,27 @@
+apiVersion: dapr.io/v1alpha1
+kind: Resiliency
+metadata:
+  name: myresiliency
+scopes:
+  - carservice
+  - worker
+spec:
+  policies:
+    timeouts:
+      general: 5s
+      important: 60s
+      largeResponse: 10s
+
+    circuitBreakers:
+      carservice:
+        maxRequests: 1
+        interval: 8s
+        timeout: 10s
+        trip: consecutiveFailures >= 1
+
+
+
+  targets:
+    apps:
+      carservice:
+        circuitBreaker: carservice

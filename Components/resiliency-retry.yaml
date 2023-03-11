@@ -1,0 +1,22 @@
+apiVersion: dapr.io/v1alpha1
+kind: Resiliency
+metadata:
+  name: myresiliency
+# similar to subscription and configuration specs, scopes lists the Dapr App IDs that this
+# resiliency spec can be used by.
+scopes:
+  - carservice
+  - worker
+spec:
+
+  policies:
+    retries:
+      carservice:
+        policy: constant
+        duration: 3s
+        maxRetries: 10
+
+  targets:
+    apps:
+      carservice:
+        retry: carservice
