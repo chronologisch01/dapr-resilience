@@ -4,7 +4,7 @@ RUN wget -q https://raw.githubusercontent.com/dapr/cli/master/install/install.sh
 
 ARG JAR_FILE=./CarService/target/*.jar
 COPY ${JAR_FILE} app.jar
-COPY ./Components/resiliency.yaml /components/
+COPY Policies/resiliency.yaml /components/
 
 ARG DAPR_BUILD_DIR
 COPY $DAPR_BUILD_DIR /opt/dapr

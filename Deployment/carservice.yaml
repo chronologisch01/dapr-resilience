@@ -38,15 +38,15 @@ spec:
         dapr.io/enabled: "true"
         dapr.io/config: "config"
         dapr.io/app-id: "carservice"
-        dapr.io/enable-api-logging: "true"
+#        dapr.io/enable-api-logging: "true"
         dapr.io/app-port: "8080"
 #        dapr.io/metrics-port: "9090"
 #        dapr.io/app-protocol: "http"
-        dapr.io/enable-app-health-check: "true"
-        dapr.io/app-health-probe-interval: "3"
-        dapr.io/app-health-probe-timeout: "200"
-        dapr.io/app-health-threshold: "2"
-        dapr.io/log-as-json: "true"
+#        dapr.io/enable-app-health-check: "true"
+#        dapr.io/app-health-probe-interval: "3"
+#        dapr.io/app-health-probe-timeout: "200"
+#        dapr.io/app-health-threshold: "2"
+#        dapr.io/log-as-json: "true"
     spec:
       containers:
         - name: carservice
@@ -55,9 +55,9 @@ spec:
             - name: APP_PORT
               value: "8080"
           imagePullPolicy: Never
-          readinessProbe:
-            httpGet:
-              path: /health
-              port: 8080
-            initialDelaySeconds: 10
-            periodSeconds: 5
+#          readinessProbe:
+#            httpGet:
+#              path: /health
+#              port: 8080
+#            initialDelaySeconds: 10
+#            periodSeconds: 5
